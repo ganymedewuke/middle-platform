@@ -3,5 +3,9 @@ package com.ganymede.mapper;
 import com.ganymede.entity.MemberInfo;
 
 public interface MemberAdminMapper {
-    public void insertMember(MemberInfo memberInfo);
+    void insertMember(MemberInfo memberInfo);
+
+    MemberInfo loginMember(MemberInfo memberInfo);
+
+    void updateMember(MemberInfo memberInfo);
 }

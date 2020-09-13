@@ -7,4 +7,14 @@
         </selectKey>
         insert into member_info (account,password) values (#{account},#{password})
     </insert>
+
+    <select id="loginMember" parameterType="com.ganymede.entity.MemberInfo" resultType="com.ganymede.entity.MemberInfo">
+        select * from member_info where account=#{account} and password = #{password}
+    </select>
+    
+    
+    <update id="updateMember" parameterType="com.ganymede.entity.MemberInfo">
+        update member_info set sex=#{sex} , age = #{age} , phone=#{phone} where id=#{id}
+    </update>
+
 </mapper>

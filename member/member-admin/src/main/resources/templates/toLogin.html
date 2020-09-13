@@ -4,11 +4,10 @@
     <title>用户注册</title>
 </head>
 <body>
-<form th:action="insert" th:method="post">
+<form th:action="login" th:method="post">
     账号： <input th:name="account"/> <br/>
     密码： <input th:name="password" th:type="password"/> <br/>
-    重复输入密码： <input th:name="repassword" th:type="password"/> <br/>
-    <input th:type="submit" th:value="提交"/> <br/>
+    <input th:type="submit" th:value="登录"/> <br/>
 </form>
 </body>
 </html>

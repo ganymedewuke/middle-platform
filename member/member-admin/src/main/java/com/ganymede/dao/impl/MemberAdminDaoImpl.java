@@ -15,4 +15,16 @@ public class MemberAdminDaoImpl implements MemberAdminDao {
     public void insertMember(MemberInfo memberInfo) {
         memberAdminMapper.insertMember(memberInfo);
     }
+
+    @Override
+    public MemberInfo loginMember(MemberInfo memberInfo) {
+        return memberAdminMapper.loginMember(memberInfo);
+    }
+
+    @Override
+    public void updateMember(MemberInfo memberInfo) {
+        memberAdminMapper.updateMember(memberInfo);
+    }
+
+
 }
