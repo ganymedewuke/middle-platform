@@ -10,8 +10,11 @@
     <version>1.0</version>
 
     <modules>
-        <module>member</module>
+        <module>member-center</module>
         <module>common</module>
+        <module>product-center</module>
+        <module>product-center/product-type</module>
+        <module>product-center/product-type</module>
     </modules>
 
     <dependencies>
