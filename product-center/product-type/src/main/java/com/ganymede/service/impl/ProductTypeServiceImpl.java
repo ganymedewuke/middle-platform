@@ -16,4 +16,16 @@ public class ProductTypeServiceImpl implements ProductTypeService {
     public void insertProductType(ProductType productType) {
         prodcutTypeDao.insertProductType(productType);
     }
+
+    @Override
+    public ProductType findById(long id) {
+        return prodcutTypeDao.findById(id);
+    }
+
+    @Override
+    public void updateProductType(ProductType productType) {
+        prodcutTypeDao.updateProductType(productType);
+    }
+
+
 }

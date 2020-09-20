@@ -9,4 +9,15 @@
         values (#{productTypeName},#{productTypeDesc},#{productTypeParentId},#{productTypeLevel})
     </insert>
 
+    <select id="findById" parameterType="java.lang.Long" resultType="com.ganymede.entity.ProductType">
+        select id,product_type_name as productTypeName,product_type_desc as productTypeDesc,
+        product_type_parent_id as productTypeParentId ,product_type_level as productTypeLevel
+         from product_type where id=#{id}
+    </select>
+
+
+    <update id="updateProductType" parameterType="com.ganymede.entity.ProductType">
+        update product_type set product_type_name=#{productTypeName} , product_type_desc = #{productTypeDesc}  where id=#{id}
+    </update>
+
 </mapper>

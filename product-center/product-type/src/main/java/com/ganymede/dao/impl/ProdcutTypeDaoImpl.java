@@ -15,4 +15,14 @@ public class ProdcutTypeDaoImpl implements ProdcutTypeDao {
     public void insertProductType(ProductType productType) {
         productTypeMapper.insertProductType(productType);
     }
+
+    @Override
+    public ProductType findById(long id) {
+        return productTypeMapper.findById(id);
+    }
+
+    @Override
+    public void updateProductType(ProductType productType) {
+        productTypeMapper.updateProductType(productType);
+    }
 }

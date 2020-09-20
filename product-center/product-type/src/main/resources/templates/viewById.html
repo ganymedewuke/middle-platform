@@ -1,0 +1,24 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>类别展示</title>
+</head>
+<body>
+
+<table border="1">
+    <tr>
+        <td>类目名称</td>
+        <td>类目描述</td>
+        <td>父类目</td>
+        <td>类目等级</td>
+    </tr>
+    <tr>
+        <td><span th:text="${productType.productTypeName}"></span></td>
+        <td><span th:text="${productType.productTypeDesc}"></span></td>
+        <td><span th:text="${productType.productTypeParentId}"></span></td>
+        <td><span th:text="${productType.productTypeLevel}"></span></td>
+    </tr>
+</table>
+
+</body>
+</html>
