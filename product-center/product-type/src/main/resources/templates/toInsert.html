@@ -1,0 +1,15 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>用户注册</title>
+</head>
+<body>
+<form th:action="insert" th:method="post">
+    商品类别名称： <input th:name="productTypeName"/> <br/>
+    商品类别描述： <input th:name="productTypeDesc"/> <br/>
+    父类id： <input th:name="productTypeParentId"/> <br/>
+    商品类别等级： <input th:name="productTypeLevel"/> <br/>
+    <input th:type="submit" th:value="提交"/> <br/>
+</form>
+</body>
+</html>
