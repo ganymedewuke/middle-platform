@@ -12,6 +12,7 @@
         <module>member-center</module>
         <module>product-center</module>
         <module>common-utils</module>
+        <module>trade-center</module>
     </modules>
 
     <dependencies>
