@@ -1,0 +1,21 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>商品审核</title>
+</head>
+<body>
+<form th:action="approve" th:method="post">
+    <input th:type="hidden" th:value="${product.id}" th:name="id"/>
+    商品类别： <span th:text="${product.productTypeId}"></span> <br/>
+    商品名称： <span th:text="${product.productName}"></span> <br/>
+    商品标题： <span th:text="${product.productTitle}"></span> <br/>
+    商品价格： <span th:text="${product.productPrice}"></span> <br/>
+    商家ID： <span th:text="${product.merchantId}"></span><br/>
+    库存数量： <span th:text="${product.nums}"></span> <br/>
+    商品图片地址： <span th:text="${product.pictureAddress}"></span> <br/>
+    审核状态： 通过 <input th:type="radio" th:name="approveStatus" th:value="1">
+    退回 <input th:type="radio" th:name="approveStatus" th:value="2">
+    <input th:type="submit" th:value="提交"/> <br/>
+</form>
+</body>
+</html>

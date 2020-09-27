@@ -1,0 +1,34 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>商品展示</title>
+</head>
+<body>
+
+<table border="1">
+    <tr>
+        <td>商品类别</td>
+        <td>商品名称</td>
+        <td>商品标题</td>
+        <td>商品价格</td>
+        <td>商家信息</td>
+        <td>库存数量</td>
+        <td>商品图片地址</td>
+        <td>销售的数量</td>
+        <td>审核状态</td>
+    </tr>
+    <tr>
+        <td><span th:text="${product.productTypeId}"></span></td>
+        <td><span th:text="${product.productName}"></span></td>
+        <td><span th:text="${product.productTitle}"></span></td>
+        <td><span th:text="${product.productPrice}"></span></td>
+        <td><span th:text="${product.merchantId}"></span></td>
+        <td><span th:text="${product.nums}"></span></td>
+        <td><span th:text="${product.pictureAddress}"></span></td>
+        <td><span th:text="${product.sellNums}"></span></td>
+        <td><span th:text="${product.approveStatus}"></span></td>
+    </tr>
+</table>
+
+</body>
+</html>

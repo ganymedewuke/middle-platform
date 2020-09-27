@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ganymede.mapper.ProductMapper">
+    <insert id="insertProduct" parameterType="com.ganymede.entity.Product">
+        <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
+            SELECT LAST_INSERT_ID()
+        </selectKey>
+        insert into middle_platform.product (product_type_id,product_name,product_title,product_price,
+        merchant_id,create_time,approve_status,nums,sell_nums,picture_address)
+        values (#{productTypeId},#{productName},#{productTitle},#{productPrice},#{merchantId},
+        #{creatTime},#{approveStatus},#{nums},#{sellNums},#{pictureAddress})
+    </insert>
+
+    <update id="updateStatusBy" parameterType="com.ganymede.entity.Product">
+        update middle_platform.product set approve_status=#{approveStatus},approve_time=#{approveTime}
+        where id = #{id}
+    </update>
+
+    <select id="selectById" resultType="com.ganymede.entity.Product" parameterType="java.lang.Long">
+        select id,
+        product_type_id as productTypeId,
+        product_name as productName,
+        product_title as productTitle,
+        product_price as productPrice,
+        merchant_id as merchantId,
+        create_time as creatTime,
+        update_time as  updateTime,
+        approve_time as approveTime,
+        approve_status as approveStatus,
+        nums as nums ,
+        sell_nums as sellNums,
+        picture_address  as pictureAddress from middle_platform.product where id=#{id}
+    </select>
+
+
+    <update id="updateInfo" parameterType="com.ganymede.entity.Product">
+        update middle_platform.product set product_type_id = #{productTypeId},
+        product_name = #{productName},
+        product_title = #{productTitle},
+        product_price = #{productPrice},
+        merchant_id = #{merchantId},
+        update_time = #{updateTime},
+        nums = #{nums} ,
+        picture_address = #{pictureAddress}
+        where id = #{id}
+    </update>
+
+</mapper>
+
