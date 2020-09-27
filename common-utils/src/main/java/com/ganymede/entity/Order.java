@@ -12,13 +12,14 @@ public class Order {
     private long productId;
     private long merchantId;
     private Date createTime;
+    private Date updateTime;
     private Date payTime;
     private int payStatus;
     private String address;
     private String telephone;
     private String userName;
     private String tradeNumber;
-    private String pay_type;
+    private String payType;
     private int payNumber;
     private int ordersStatus;
 }

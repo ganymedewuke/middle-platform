@@ -1,0 +1,26 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>修改商品明细</title>
+</head>
+<body>
+<form th:action="updateDetail" th:method="post">
+    <input th:type="hidden" th:value="${productDetail.id}" th:name="id"/>
+
+    商品类别： <span th:text="${product.productTypeId}"></span> <br/>
+    商品名称： <span th:text="${product.productName}"></span> <br/>
+    商品标题： <span th:text="${product.productTitle}"></span> <br/>
+    商品价格： <span th:text="${product.productPrice}"></span> <br/>
+    商家ID： <span th:text="${product.merchantId}"></span><br/>
+    库存数量： <span th:text="${product.nums}"></span> <br/>
+
+    产地： <input th:name="productPlace" th:value="${productDetail.productPlace}"/> <br/>
+    重量： <input th:name="productWeight" th:value="${productDetail.productWeight}"/> <br/>
+    品牌： <input th:name="productBrand" th:value="${productDetail.productBrand}"/> <br/>
+    规格和包装： <input th:name="productSpecification" th:value="${productDetail.productSpecification}"/> <br/>
+    详情图片地址： <input th:name="productDetailPic" th:value="${productDetail.productDetailPic}"/> <br/>
+
+    <input th:type="submit" th:value="提交"/> <br/>
+</form>
+</body>
+</html>
